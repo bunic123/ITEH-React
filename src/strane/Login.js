@@ -1,3 +1,5 @@
+import LoginForm from "../komponente/LoginForm";
+
 function Login() {
 
     const users = [
@@ -8,7 +10,7 @@ function Login() {
 
     return (
         <div>
-          
+            <LoginForm />
         </div>
     )
 }
