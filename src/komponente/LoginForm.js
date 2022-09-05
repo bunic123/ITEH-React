@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function LoginForm() {
+function LoginForm(props) {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -25,7 +25,7 @@ function LoginForm() {
                     <label>Password: </label>
                     <input type="password" className="form-control" value={password} onChange={handlePassword} />
                 </div>
-                <button type="button" id='btn' className='btn btn-primary'>Login</button>
+                <button type="button" onClick={() => props.prijaviSe(username, password)} id='btn' className='btn btn-primary'>Login</button>
             </div>
         </div>
     )

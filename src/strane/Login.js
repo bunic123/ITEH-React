@@ -27,7 +27,7 @@ function Login() {
 
     return (
         <div>
-            <LoginForm />
+            <LoginForm prijaviSe={prijaviSe} />
         </div>
     )
 }
