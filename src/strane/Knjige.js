@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ListaKnjiga from '../komponente/ListaKnjiga';
 
 function Knjige() {
 
@@ -27,7 +28,6 @@ function Knjige() {
             .catch(err => console.error(err));
     }
 
-    console.log(knjige)
 
     return (
         <div>
@@ -36,7 +36,14 @@ function Knjige() {
                 <input type="text" className="form-control" onChange={handlePretraga} value={pretraga} />
                 <button onClick={pretraziKnjige} className="btn btn-primary mt-2">Pretraga</button>
             </div>
+
+            <div className='kndiv'>
+                <ListaKnjiga knjige={knjige} />
+            </div>
+
         </div>
+
+
     )
 }
 
